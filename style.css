@@ -1,0 +1,210 @@
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	font-family: nunito;
+	transition: 200ms;
+	z-index: 3;
+	position: relative;
+	text-align: center;
+}
+
+#main {
+	width: 100%;
+	height: 100vh;
+}
+
+#background {
+	position: fixed !important;
+	background: linear-gradient(
+		-5deg,
+		hsl(190, 22%, 40%),
+		hsl(264, 70%, 33%),
+		hsl(290, 50%, 25%)
+	);
+	animation-duration: 60s;
+	animation-name: rainbow;
+	animation-iteration-count: infinite;
+	width: 100%;
+	height: 100%;
+	left: 0;
+	top: 0;
+	position: absolute;
+	z-index: 0;
+}
+
+@keyframes rainbow {
+	from {
+		filter: hue-rotate(0);
+	}
+	to {
+		filter: hue-rotate(360deg);
+	}
+}
+
+#tile {
+	/*padding-top: 2.4rem;*/
+	/*padding-left: 1rem;*/
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+#main > #tile > a,
+.bubble {
+	z-index: 14;
+	opacity: 0.85;
+	margin: 0.9rem;
+	background: linear-gradient(20deg, #77777766, #efefef56);
+	color: #ddd;
+	text-decoration: none;
+	font-size: 1.2rem;
+	padding: 1.728rem 2.16rem;
+	border-radius: 1.2rem;
+	display: inline-block;
+	transition: 1500ms;
+	transition-timing-function: ease-out;
+}
+
+#main > #tile > a:hover,
+.bubble:hover {
+	opacity: 1;
+	color: #eee;
+	box-shadow: 0 0 2px 2px #eee6 inset, 0 0 100px 0 #fff4;
+	transform: scale(0.94);
+	z-index: 300;
+	transition: 200ms;
+}
+
+#main > #tile > a:focus {
+	transform: scale(1.3) translate(0, -5px);
+	box-shadow: 0 0 2px 2px #eee6 inset, 0 0 0 0 #0000,
+		0 0 0 max(100vw, 100vh) #000f;
+	z-index: 500;
+
+	transition: 300ms;
+}
+
+#main {
+	/*padding: 1rem*/
+}
+
+#pasteButton:hover{
+	background-color: #fff;
+}
+
+#addButtonInPanel{
+	padding-left: 1rem;
+	padding-right: 1rem;
+}
+
+#addButtonInPanel:hover + #newUrl {
+	/*font-size: 2rem !important;*/
+	/*transform: scale(1.2);*/
+	/*flex: 2;*/
+
+}
+
+
+#addButtonInPanel:hover {
+	/*flex: 4;*/
+
+	color: #ededed;
+	background: #222
+
+	/*text-shadow: -19px 0 0 black, 19px 0 0 black;*/
+	/*letter-spacing: 0.8rem;*/
+	/*color: #eee;*/
+	/*background: #444;*/
+	/*transition: 500ms;*/
+}
+
+
+#pasteButton, #addButtonInPanel {
+	flex: 1;
+	border-radius: 13px;
+	color: #222;
+	background: #eee;
+
+}
+
+#addButtonInPanel {
+	border-radius: 0 13px 13px 0;
+	margin-left: 0 !important;
+	background: linear-gradient(-90deg, #fff, #ddd);
+	font-size: 1.2rem;
+	font-weight: 700;
+}
+
+#newUrl{
+	border-radius:  13px 0 0 13px ;
+}
+#newName{
+	border-radius: 13px;
+}
+#newUrl, #newName{
+	margin-right: 0 !important;
+	border: none;
+	border-color: transparent;
+	background-color: #ddd;
+}
+
+#newColor {
+	min-width: 2rem;
+	flex: 1;
+	border: none;
+	padding: 0;
+	display: inline-block;
+	overflow: hidden;
+	border-radius: 13px;
+}
+
+#theColor{
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	transform: scale(2);
+}
+
+#addNewPanel > * {
+	margin: 0.2rem;
+	height: 100%;
+	height: 4rem;
+}
+
+#newUrl {
+	padding: 0.5rem;
+	flex: 5;
+}
+
+#newColor {
+	flex: 1;
+}
+
+#addNewPanel {
+	/*display: flex;*/
+	display: none;
+	/*background-color: #4444;*/
+	/*padding: 1rem;*/
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	padding: 1rem 12.5%;
+}
+
+
+
+#telegram {
+	background-color: #0088cc !important;
+}
+
+button {
+	border: none;
+}
+
+#main > * {
+	z-index: 8;
+}
