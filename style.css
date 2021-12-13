@@ -159,6 +159,7 @@
 	display: inline-block;
 	overflow: hidden;
 	border-radius: 13px;
+	margin-left: 0.5rem !important;
 }
 
 #theColor{
@@ -181,9 +182,6 @@
 	flex: 5;
 }
 
-#newColor {
-	flex: 1;
-}
 
 #addNewPanel {
 	/*display: flex;*/
@@ -212,10 +210,4 @@ button {
 
 #main > * {
 	z-index: 8;
-}
-
-
-
-#defaults, #tools{
-	display: none;
 }
