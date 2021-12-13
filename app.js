@@ -1,4 +1,4 @@
-var addNewPanel, newUrl, newColor, paste, addButtonInPanel, add, tile, newName
+var addNewPanel, newUrl, newColor, paste, addButtonInPanel, add, tile, newName, clear
 var s = function () {
 	return document.querySelector(...arguments)
 }
@@ -68,3 +68,10 @@ newName.addEventListener("keyup", function(event) {
     addButtonInPanel.click();
   }
 });
+
+
+clear = s('#clear')
+clear.onclick = ()=>{
+	window.localStorage.clear()
+	location.reload()
+}
