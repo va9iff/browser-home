@@ -1,4 +1,5 @@
-var addNewPanel, newUrl, newColor, paste, addButtonInPanel, add, tile, newName, clear
+var addNewPanel, newUrl, newColor, paste, addButtonInPanel, add, tile, newName, clear, defaults, tools
+
 var s = function () {
 	return document.querySelector(...arguments)
 }
@@ -20,7 +21,7 @@ function save() {
 }
 
 function load() {
-	tile.innerHTML = window.localStorage.getItem("rawTileHtml")
+	tile.innerHTML = defaults.innerHTML + window.localStorage.getItem("rawTileHtml") + tools.innerHTML
 }
 
 addNewPanel = s("#addNewPanel")
@@ -30,6 +31,8 @@ paste = s("#pasteButton")
 addButtonInPanel = s("#addButtonInPanel")
 add = s("#add")
 newName = s("#newName")
+defaults = s('#defaults')
+tools = s('#tools')
 
 add.onclick = () => (addNewPanel.style.display = "flex")
 

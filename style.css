@@ -213,3 +213,9 @@ button {
 #main > * {
 	z-index: 8;
 }
+
+
+
+#defaults, #tools{
+	display: none;
+}
